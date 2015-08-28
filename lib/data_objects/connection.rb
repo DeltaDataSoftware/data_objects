@@ -48,6 +48,8 @@ module DataObjects
       # Exceptions to how a driver class is determined for a given URI
       driver_class = if driver == 'sqlserver'
         'SqlServer'
+      elsif driver == 'mysql2'
+         driver.chop.capitalize
       else
         driver.capitalize
       end
